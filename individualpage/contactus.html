@@ -16,12 +16,23 @@
     <!--The div element for the map -->
     <div id="map"></div>
 
-    <!-- 
-     The `defer` attribute causes the callback to execute after the full HTML
-     document has been parsed. For non-blocking uses, avoiding race conditions,
-     and consistent behavior across browsers, consider loading using Promises
-     with https://www.npmjs.com/package/@googlemaps/js-api-loader.
-    -->
+    // Initialize and add the map
+function initMap() {
+  // The location of Rampion
+  const rampion = { lat: 26.119804, lng: 85.896521 };
+  // The map, centered at Uluru
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 10,
+    center: rampion,
+  });
+  // The marker, positioned at Uluru
+  const marker = new google.maps.Marker({
+    position: rampion,
+    map: map,
+  });
+}
+
+window.initMap = initMap;
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOHZRe7aMkbopxWxlRc9mAofHoJmS5p8Q&callback=initMap&v=weekly"
       defer
