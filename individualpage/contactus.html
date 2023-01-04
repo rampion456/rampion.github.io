@@ -16,21 +16,21 @@
 
 <h3>Rampion on the map</h3>
     <!--The div element for the map -->
-    <div id="map"></div>
+    <div id="contactusmap"></div>
 <script>
     // Initialize and add the map
 function initMap() {
   // The location of Rampion
   const rampion = { lat: 26.119804, lng: 85.896521 };
   // The map, centered at Uluru
-  const map = new google.maps.Map(document.getElementById("map"), {
+  const contactusmap = new google.maps.Map(document.getElementById("contactusmap"), {
     zoom: 10,
     center: rampion,
   });
   // The marker, positioned at Uluru
   const marker = new google.maps.Marker({
     position: rampion,
-    map: map,
+    map: contactusmap,
   });
 }
 
