@@ -12,35 +12,6 @@
     &emsp; Laheriasarai, Darbhanga <br>
     &emsp; 846001
   </p>  
-    
-
-<h3>Rampion on the map</h3>
-    <!--The div element for the map -->
-    <div id="contactusmap"></div>
-<script>
-    // Initialize and add the map
-function initMap() {
-  // The location of Rampion
-  const rampion = { lat: 26.119804, lng: 85.896521 };
-  // The map, centered at Uluru
-  const contactusmap = new google.maps.Map(document.getElementById("contactusmap"), {
-    zoom: 10,
-    center: rampion,
-  });
-  // The marker, positioned at Uluru
-  const marker = new google.maps.Marker({
-    position: rampion,
-    map: contactusmap,
-  });
-}
-
-window.initMap = initMap;
- </script>
- <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOHZRe7aMkbopxWxlRc9mAofHoJmS5p8Q&callback=initMap&v=weekly"
-      defer
-    >
-</script>
 
 
 
